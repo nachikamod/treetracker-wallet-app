@@ -8,7 +8,7 @@ async function createWallet(walletData: Wallet, token: string) {
       `${TREETRACKER_API}/wallets`,
       {
         wallet: walletData.name,
-        about: walletData.about,
+        about: walletData.about, // Wallet description
       },
       {
         headers: {

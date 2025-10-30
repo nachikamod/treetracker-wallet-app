@@ -6,6 +6,7 @@ on:
       - "*"
     paths:
       - "apps/user/**" # Only trigger for changes in the apps/user directory
+      - "packages/wallet/**"
 
 jobs:
   test:
@@ -41,3 +42,7 @@ jobs:
 
       - name: Run integration tests
         run: yarn workspace user int-test
+
+      # Run E2E tests for the wallet package
+      - name: Run E2E tests for wallet
+        run: yarn workspace @treetracker/wallet test
