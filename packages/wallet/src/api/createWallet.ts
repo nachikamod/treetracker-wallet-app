@@ -2,14 +2,13 @@ import axios, { isAxiosError } from "axios";
 import { Wallet } from "../types/wallet";
 import { TREETRACKER_API, WALLET_API_KEY } from "../utils/config";
 
-// Test Change to trigger pr
 async function createWallet(walletData: Wallet, token: string) {
   try {
     const response = await axios.post(
       `${TREETRACKER_API}/wallets`,
       {
         wallet: walletData.name,
-        about: walletData.about,
+        about: walletData.about, // Wallet description
       },
       {
         headers: {

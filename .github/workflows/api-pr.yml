@@ -43,5 +43,6 @@ jobs:
       - name: Run integration tests
         run: yarn workspace user int-test
 
+      # Run E2E tests for the wallet package
       - name: Run E2E tests for wallet
-        run: arn workspace @treetracker/wallet test
+        run: yarn workspace @treetracker/wallet test
